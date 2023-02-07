@@ -18,7 +18,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="890-YU-HqC">
                                 <rect key="frame" x="16" y="34" width="288" height="144"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="890-YU-HqC" secondAttribute="height" multiplier="2:1" id="FBB-fB-lRx"/>
                                 </constraints>
@@ -123,7 +123,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.13121166536232656" green="0.27671141228763474" blue="0.39201433634020622" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.89945523354251855" green="0.45051599285374611" blue="1" alpha="0.39798575680272108" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ZwI-ie-2Fy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3oA-ve-4wv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="890-YU-HqC" secondAttribute="trailing" constant="16" id="GUK-dl-s3p"/>
@@ -152,9 +152,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
