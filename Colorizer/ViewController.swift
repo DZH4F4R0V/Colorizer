@@ -17,25 +17,41 @@ class ViewController: UIViewController {
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
+    @IBOutlet var redValueLabel: UILabel!
+    @IBOutlet var greenValueLabel: UILabel!
+    @IBOutlet var blueValueLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorView.layer.cornerRadius = 30
-        setupAllLabels()
+        setupAllValueLabels()
     }
 
     @IBAction func redSliderAction() {
-        redLabel.text = redSlider.value.formatted()
+        redValueLabel.text = String(format: "%.2f", redSlider.value)
+        paintingView()
     }
     
-    private func setupAllLabels() {
-        redLabel.text = "Red: \(redSlider.value.formatted())"
+    @IBAction func greenSliderAction() {
+        greenValueLabel.text = String(format: "%.2f", greenSlider.value)
+        paintingView()
     }
     
-    private func setupRedSlider() {
-//        redSlider.value
+    @IBAction func blueSliderAction() {
+        blueValueLabel.text = String(format: "%.2f", blueSlider.value)
+        paintingView()
+    }
+    
+    private func setupAllValueLabels() {
+        redValueLabel.text = String(format: "%.2f", redSlider.value)
+        greenValueLabel.text = String(format: "%.2f", greenSlider.value)
+        blueValueLabel.text = String(format: "%.2f", blueSlider.value)
+    }
+    
+    private func paintingView() {
+        let backgroundColorView = UIColor.init(displayP3Red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        colorView.backgroundColor = backgroundColorView
     }
 
 }
-
