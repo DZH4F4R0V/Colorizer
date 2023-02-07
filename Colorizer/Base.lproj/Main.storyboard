@@ -123,7 +123,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.89945523354251855" green="0.45051599285374611" blue="1" alpha="0.39798575680272108" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.1725490093" green="0.1725490093" blue="0.1725490093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ZwI-ie-2Fy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3oA-ve-4wv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="890-YU-HqC" secondAttribute="trailing" constant="16" id="GUK-dl-s3p"/>
