@@ -15,7 +15,7 @@ final class ColorizedViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? SettingsViewController else { return }
-        settingsVC.view.backgroundColor = .darkGray
+        settingsVC.incomingColor = view.backgroundColor
         settingsVC.delegate = self
     }
 }

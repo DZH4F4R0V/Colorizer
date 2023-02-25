@@ -20,13 +20,17 @@ final class SettingsViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
 
+    var incomingColor: UIColor!
+    
     unowned var delegate: SettingsViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 30
-        setColor()
+//        setColor()
+        colorView.backgroundColor = incomingColor
         setValue(for: redValueLabel, greenValueLabel, blueValueLabel)
+        setColors(from: <#T##CGFloat#>, )
     }
 
     // MARK: - IBAction
@@ -72,5 +76,23 @@ final class SettingsViewController: UIViewController {
     
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
+    }
+    
+    private func setColors(from colorView: CGFloat) {
+        redSlider.value = Float((colorView.backgroundColor?.rgb.red)!)
+        greenSlider.value = Float((colorView.backgroundColor?.rgb.green)!)
+        blueSlider.value = Float((colorView.backgroundColor?.rgb.blue)!)
+    }
+}
+
+extension UIColor {
+    var rgb: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        return (red, green, blue, alpha)
     }
 }
