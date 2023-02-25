@@ -24,6 +24,5 @@ final class ColorizedViewController: UIViewController {
 extension ColorizedViewController: SettingsViewControllerDelegate {
     func setNew(color: UIColor) {
         self.view.backgroundColor = color
-        print("Working")
     }
 }

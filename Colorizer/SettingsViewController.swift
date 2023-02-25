@@ -27,7 +27,6 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 30
-//        setColor()
         colorView.backgroundColor = incomingColor
         getColor()
         setValue(for: redValueLabel, greenValueLabel, blueValueLabel)
@@ -51,6 +50,7 @@ final class SettingsViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    // MARK: - Private functions
     private func setColor() {
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
@@ -85,6 +85,7 @@ final class SettingsViewController: UIViewController {
     }
 }
 
+    // MARK: - Extensions
 extension UIColor {
     var rgb: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
         var red: CGFloat = 0
