@@ -29,8 +29,8 @@ final class SettingsViewController: UIViewController {
         colorView.layer.cornerRadius = 30
 //        setColor()
         colorView.backgroundColor = incomingColor
+        getColor()
         setValue(for: redValueLabel, greenValueLabel, blueValueLabel)
-        setColors(from: <#T##CGFloat#>, )
     }
 
     // MARK: - IBAction
@@ -60,6 +60,12 @@ final class SettingsViewController: UIViewController {
         )
     }
     
+    private func getColor() {
+        redSlider.value = Float(incomingColor.rgb.red)
+        greenSlider.value = Float(incomingColor.rgb.green)
+        blueSlider.value = Float(incomingColor.rgb.blue)
+    }
+    
     private func setValue(for valueLabels: UILabel...) {
         valueLabels.forEach { label in
             switch label {
@@ -76,12 +82,6 @@ final class SettingsViewController: UIViewController {
     
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
-    }
-    
-    private func setColors(from colorView: CGFloat) {
-        redSlider.value = Float((colorView.backgroundColor?.rgb.red)!)
-        greenSlider.value = Float((colorView.backgroundColor?.rgb.green)!)
-        blueSlider.value = Float((colorView.backgroundColor?.rgb.blue)!)
     }
 }
 
